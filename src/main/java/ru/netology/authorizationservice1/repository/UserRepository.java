@@ -1,5 +1,6 @@
 package ru.netology.authorizationservice1.repository;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import ru.netology.authorizationservice1.authorities.Authorities;
 import ru.netology.authorizationservice1.error.ErrorRegistration;
