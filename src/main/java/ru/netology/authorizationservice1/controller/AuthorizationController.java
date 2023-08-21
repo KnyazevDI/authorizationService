@@ -1,14 +1,10 @@
 package ru.netology.authorizationservice1.controller;
 
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import ru.netology.authorizationservice1.authorities.Authorities;
-import ru.netology.authorizationservice1.repository.UserRepository;
 import ru.netology.authorizationservice1.service.AuthorizationService;
 
 import java.util.List;
@@ -28,5 +24,10 @@ public class AuthorizationController {
     @GetMapping("/registration")
     public void userRegistration(@RequestParam("user") String user, @RequestParam("password") String password) {
         service.register(user, password);
+    }
+
+    @GetMapping("/hello")
+    public String hello() {
+        return "Hello, autenticated user";
     }
 }
