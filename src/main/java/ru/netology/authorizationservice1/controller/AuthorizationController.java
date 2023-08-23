@@ -9,7 +9,7 @@ import ru.netology.authorizationservice1.service.AuthorizationService;
 
 import java.util.List;
 
-@RestController
+//@RestController
 public class AuthorizationController {
 
     @Autowired
